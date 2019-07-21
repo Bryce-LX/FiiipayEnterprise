@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F42A5E75-A07A-47E0-92B3-9ACD3E31A0CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FiiiPay.Enterprise.Web</RootNamespace>
+    <AssemblyName>FiiiPay.Enterprise.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FiiiPay.Framework, Version=1.0.6929.29687, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FiiiPay.Framework.1.0.6929.29687\lib\net47\FiiiPay.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="FiiiPay.Framework.Cache, Version=1.0.6918.25486, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FiiiPay.Framework.Cache.1.0.6918.25486\lib\net47\FiiiPay.Framework.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Cryptography.Internal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Cryptography.Internal.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Cryptography.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Cryptography.KeyDerivation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Cryptography.KeyDerivation.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Cryptography.KeyDerivation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\StackExchange.Redis.1.2.6\lib\net46\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MerchantController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\OperationPictureController.cs" />
+    <Compile Include="Controllers\TradingRecordController.cs" />
+    <Compile Include="Controllers\WalletController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountInfo.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BaseInfomationViewModels.cs" />
+    <Compile Include="Models\FirstSettingViewModel.cs" />
+    <Compile Include="Models\GridPager.cs" />
+    <Compile Include="Models\HomeIndexModel.cs" />
+    <Compile Include="Models\NewsViewModel.cs" />
+    <Compile Include="Models\OrderIndexModel.cs" />
+    <Compile Include="Models\OrderViewModels.cs" />
+    <Compile Include="Models\SendEmailCodeViewModels.cs" />
+    <Compile Include="Models\WebEnums.cs" />
+    <Compile Include="Models\WebMenu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AccountFbPsw.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountFbPsw.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AccountFirstSetting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountFirstSetting.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AccountLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountLogin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AccountResetEmail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountResetEmail.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AccountResetPsw.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountResetPsw.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\BalanceStatements.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BalanceStatements.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GeneralResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\MerchantIndex.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerchantIndex.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\News.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>News.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TradingRecord.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TradingRecord.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\AccessAttribute.cs" />
+    <Compile Include="Utils\Configs.cs" />
+    <Compile Include="Utils\CultureHelper.cs" />
+    <Compile Include="Utils\EmailAgent.cs" />
+    <Compile Include="Utils\EmailVerification.cs" />
+    <Compile Include="Utils\Encrypts.cs" />
+    <Compile Include="Utils\FirstLoginOnlyAttribute.cs" />
+    <Compile Include="Utils\HtmlExtensions.cs" />
+    <Compile Include="Utils\Modules.cs" />
+    <Compile Include="Utils\MultilLangRouteHandler.cs" />
+    <Compile Include="Utils\PasswordHasher.cs" />
+    <Compile Include="Utils\PasswordVerification.cs" />
+    <Compile Include="Utils\RequestResultExtensions.cs" />
+    <Compile Include="Utils\ResponesResult.cs" />
+    <Compile Include="Utils\SecurityVerification.cs" />
+    <Compile Include="Utils\SecurityVerify.cs" />
+    <Compile Include="Utils\XMLHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\page.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\f-frame-left.png" />
+    <Content Include="images\f-login-bg.png" />
+    <Content Include="images\f-login-input.png" />
+    <Content Include="images\icon-mail.png" />
+    <Content Include="images\icon-phone.png" />
+    <Content Include="images\id.png" />
+    <Content Include="images\layon.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\secret.png" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Plugins\daterangepicker\daterangepicker.css" />
+    <Content Include="Plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="Plugins\daterangepicker\moment.min.js" />
+    <Content Include="Plugins\datetimepicker\css\bootstrap-datetimepicker.css" />
+    <Content Include="Plugins\datetimepicker\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Plugins\datetimepicker\js\bootstrap-datetimepicker.js" />
+    <Content Include="Plugins\datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Plugins\elektron\elektron-rtl.css" />
+    <Content Include="Plugins\elektron\elektron-rtl.min.css" />
+    <Content Include="Plugins\elektron\elektron.css" />
+    <Content Include="Plugins\elektron\elektron.fiiipaymerchant.css" />
+    <Content Include="Plugins\elektron\elektron.js" />
+    <Content Include="Plugins\elektron\elektron.min.css" />
+    <Content Include="Plugins\elektron\elektron.min.js" />
+    <Content Include="Plugins\elektron\onoffcanvas.css" />
+    <Content Include="Plugins\elektron\onoffcanvas.js" />
+    <Content Include="Plugins\elektron\onoffcanvas.min.css" />
+    <Content Include="Plugins\elektron\onoffcanvas.min.js" />
+    <Content Include="Plugins\fiiipay\basefunction.js" />
+    <Content Include="Plugins\fiiipay\fiiiextend.js" />
+    <Content Include="Plugins\fiiipay\gridpager.css" />
+    <Content Include="Plugins\fiiipay\gridpager.js" />
+    <Content Include="Plugins\fiiipay\resources.js" />
+    <Content Include="Plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="Plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Plugins\metismenu\metisMenu.css" />
+    <Content Include="Plugins\metismenu\metisMenu.js" />
+    <Content Include="Plugins\metismenu\metisMenu.min.css" />
+    <Content Include="Plugins\metismenu\metisMenu.min.js" />
+    <Content Include="Plugins\sweetalert\sweetalert.css" />
+    <Content Include="Plugins\sweetalert\sweetalert.fiiienterprise.css" />
+    <Content Include="Plugins\sweetalert\sweetalert.min.js" />
+    <Content Include="Plugins\switch\bootstrap-switch.css" />
+    <Content Include="Plugins\switch\bootstrap-switch.js" />
+    <Content Include="Plugins\switch\bootstrap-switch.min.css" />
+    <Content Include="Plugins\switch\bootstrap-switch.min.js" />
+    <Content Include="Resources\MenuConfig.xml" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Plugins\bootstrap\config.json" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Plugins\datetimepicker\less\datetimepicker.less" />
+    <Content Include="Plugins\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Plugins\metismenu\metisMenu.js.map" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\TradingRecord\Index.cshtml" />
+    <Content Include="Views\Account\FirstSetting.cshtml" />
+    <Content Include="Views\Shared\_LayoutUnLogin.cshtml" />
+    <Content Include="Views\Account\FbPsw.cshtml" />
+    <Content Include="Views\Merchant\Index.cshtml" />
+    <Content Include="Views\Account\ResetPsw.cshtml" />
+    <Content Include="Views\Shared\_Moduls.cshtml" />
+    <Content Include="Views\Account\ResetEmail.cshtml" />
+    <Content Include="Views\Account\CheckEmail.cshtml" />
+    <Content Include="Views\Wallet\MyBalance.cshtml" />
+    <Content Include="Views\Wallet\WithdrawalList.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\OperationPicture\HomepageBanner.cshtml" />
+    <Content Include="Views\OperationPicture\FIIIEcologicalBanner.cshtml" />
+    <Content Include="Views\OperationPicture\NewsBanner.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Plugins\metismenu\fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AccountFbPsw.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountFbPsw.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccountFbPsw.zh.resx" />
+    <EmbeddedResource Include="Resources\AccountFirstSetting.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountFirstSetting.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccountFirstSetting.zh.resx" />
+    <EmbeddedResource Include="Resources\AccountLogin.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountLogin.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccountLogin.zh.resx" />
+    <EmbeddedResource Include="Resources\AccountResetEmail.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountResetEmail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccountResetEmail.zh.resx" />
+    <EmbeddedResource Include="Resources\AccountResetPsw.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountResetPsw.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AccountResetPsw.zh.resx" />
+    <EmbeddedResource Include="Resources\BalanceStatements.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BalanceStatements.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BalanceStatements.zh.resx" />
+    <EmbeddedResource Include="Resources\GeneralResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GeneralResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GeneralResource.zh.resx" />
+    <EmbeddedResource Include="Resources\MerchantIndex.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MerchantIndex.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MerchantIndex.zh.resx" />
+    <EmbeddedResource Include="Resources\News.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>News.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\News.zh.resx" />
+    <EmbeddedResource Include="Resources\TradingRecord.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TradingRecord.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TradingRecord.zh.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business\FiiiPay.Enterprise.Business\FiiiPay.Enterprise.Business.csproj">
+      <Project>{c2d9ea6e-7279-4c43-a2cb-1adc356d5911}</Project>
+      <Name>FiiiPay.Enterprise.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\FiiiPay.Enterprise.Data\FiiiPay.Enterprise.Data.csproj">
+      <Project>{d80340f1-9b19-49c9-9e7e-f798531ce5e5}</Project>
+      <Name>FiiiPay.Enterprise.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\FiiiPay.Enterprise.Entities\FiiiPay.Enterprise.Entities.csproj">
+      <Project>{55d371f3-3487-408c-a9c6-990fe17cc5b6}</Project>
+      <Name>FiiiPay.Enterprise.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49963</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63656/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

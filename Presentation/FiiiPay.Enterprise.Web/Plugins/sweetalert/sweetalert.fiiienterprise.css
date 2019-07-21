@@ -1,0 +1,16 @@
+﻿.sweet-alert > h2 {
+    font-size: 16px;
+    color: #1E1E21;
+    margin-bottom: 8px;
+}
+.sweet-alert > .sa-button-container > button {
+    padding:8px 32px;
+    border-radius: 4px;
+}
+.sweet-alert > .sa-button-container > button.confirm {
+    background-color: #3E82FE !important;
+}
+.sweet-alert .f-alert-title {
+    font-size: 14px;
+    color: #2B363C;
+}

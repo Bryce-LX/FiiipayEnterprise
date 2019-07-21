@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+    ViewBag.PageName = "新闻管理";
+}
+
+@model FiiiPay.Enterprise.Web.Models.NewsViewModel
+<div class="col-md-1 col-md-1 margin5">
+    <div><p class="f-login-webname">@Html.Resource("News", "Title")</p></div>
+</div>
+<div class="col-sm-offset col-sm-1 col-xs-10 margininput">
+    <input type="text" id="Title" name="Title" class="form-control" placeholder="" />
+</div>
+<div class="col-sm-offset col-sm-1 margin5">
+    <div><p class="f-login-webname">@Html.Resource("News", "NewsStatus")</p></div>
+</div>
+<div class="col-sm-offset col-sm-1 col-xs-10 margininput">
+    <select class="form-control" data-live-search="true" id="Status" name="Status">
+        <option>全部</option>
+        <option>展示中</option>
+        <option>已下架</option>
+    </select>
+</div>
+<div class="col-sm-offset col-sm-6 col-xs-12 butsubmit">
+    <input type="submit" class="f-btn" value="@Html.Resource("News", "Search")" onclick="GetSystemnotice()" />
+    <input type="submit" class="f-btn" value="@Html.Resource("News", "ReleaseNews")" onclick="GoCreate()" />
+</div>
+
+<table class="table" id="NewsTb"></table>
+<script>
+    $(function () {
+        $("#NewsTb").gridpager({
+            url: "~/News/LoadData",
+            colmodel: [
+                { name: "Title", title: "Title", titlecn: "文章标题", width: 20 },
+                { name: "PageView", title: "PageView", titlecn: "浏览量", width: 20 },
+                {
+                    name: "Status", title: "Status", titlecn: "展示状态", formatter: function (v) {
+                        return '<a>' + (v == 0 ? "已保存" : (v == 1 ? "展示中" : "已下架")) + '</a>';
+                    }
+                },
+                { name: "CreateTime", title: "CreateTime", titlecn: "创建时间", width: 20 },
+                {
+                    name: "Status", title: "Operate", titlecn: "操作", formatter: function (v) {
+                        return '<a>' + (v == 0 ? "已保存" : (v == 1 ? "展示中" : "已下架")) + '</a>';
+                    }
+                }
+            ]
+        });
+    });
+
+
+    function GetSystemnotice() {
+        var Title = $.trim($("#Title").val());
+        var Status = $.trim($("#Status").val());
+        $("#NewsTb").gridpager('refresh', { Title: Title, Status: Status });
+    }
+
+    function GoCreate() {
+        $.opentabpage("/News/Edit?id=-1", "Create News", "addCryptocurrency");
+    }
+
+</script>
+

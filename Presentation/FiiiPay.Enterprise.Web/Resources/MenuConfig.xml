@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MenuConfig>
+  <Module name="Basic Information" namecn="基本信息" icon="fa fa-cogs" controllername="Merchant" actionname="Index"></Module>
+  <Module name="Transaction Record" namecn="交易记录" icon="fa fa-btc" controllername="TradingRecord" actionname="Index"></Module>
+  <!--<Module name="Account Details" namecn="账户详情" icon="fa fa-cogs" controllername="Wallet">
+    <MenuItem name="Account Balance" namecn="我的资产" controllername="Wallet" actionname="MyBalance" />
+    <MenuItem name="Withdrawal Records" namecn="提币记录" controllername="Wallet" actionname="WithdrawalList" />
+  </Module>-->
+  <Module name="Operation Picture" namecn="运营图片设置" icon="fa fa-cogs" controllername="OperationPicture">
+    <MenuItem name="Homepage Banner" namecn="首页页顶主Banner" controllername="OperationPicture" actionname="HomepageBanner" />
+    <MenuItem name="FIII Ecological Banner" namecn="Fiii生态页顶Banner" controllername="OperationPicture" actionname="FIIIEcologicalBanner" />
+    <MenuItem name="News Banner" namecn="新闻小Banner" controllername="OperationPicture" actionname="NewsBanner" />
+  </Module>
+  <Module name="News Management" namecn="新闻管理" icon="fa fa-btc" controllername="News" actionname="Index"></Module>
+
+
+</MenuConfig>
